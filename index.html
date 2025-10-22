@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrackerExtension — Home</title>
+  <meta name="description" content="TrackerExtension counts sent and received messages on Gmail and LinkedIn, stores data locally, and can email you daily summaries via Gmail API with your consent." />
+  <style>
+    :root { --fg:#111; --muted:#555; --bg:#fff; --accent:#0b5fff; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:860px;margin:48px auto;padding:0 20px}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    header h1{margin:0 0 6px 0;font-size:28px}
+    header p{margin:0;color:var(--muted)}
+    section{margin:28px 0}
+    ul{padding-left:20px}
+    code{background:#f4f4f5;padding:2px 4px;border-radius:4px}
+    footer{margin:48px 0;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>TrackerExtension</h1>
+      <p>Lightweight Chrome extension that tracks sent and received messages on Gmail and LinkedIn. Data stays on your device. Optionally, it can email you a daily CSV report using your Gmail account with your explicit consent.</p>
+    </header>
+
+    <section>
+      <h2>What it does</h2>
+      <ul>
+        <li>Counts messages you <strong>send</strong> and <strong>receive</strong> on Gmail and LinkedIn.</li>
+        <li>Stores counts and deduplication keys in <code>chrome.storage.local</code> only.</li>
+        <li><em>No servers</em>; nothing is transmitted to us.</li>
+        <li>Optional: send yourself a daily CSV summary via Gmail API (scope: <code>gmail.send</code>).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacy-first</h2>
+      <p>We do not collect or sell personal data. Message content is not uploaded; minimal metadata is used locally for counting and deduplication.</p>
+      <p>See details in our <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a>.</p>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>Questions or requests? Email <a href="mailto:contact@example.com">contact@example.com</a>.</p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> TrackerExtension. All rights reserved.</div>
+      <div>Last updated: <time id="lu">2025-10-22</time></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
